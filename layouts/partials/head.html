@@ -19,7 +19,12 @@
 	{{- end }}
 	<!--<link rel="preload" href="{{ $.Site.Params.cssPath | default "css/smorg.css" | absURL }}" as="style">
 	<link rel="stylesheet" href="{{ $.Site.Params.cssPath | default "css/smorg.css" | absURL }}">-->
-	<link rel="preload" href="{{ "css/navbar.css" | absURL }}" as="style">
-	<link rel="stylesheet" href="{{ "css/navbar.css" | absURL }}">
+<link href="{{ "https://fonts.googleapis.com/css?family=Open+Sans:400,600" }}" rel="stylesheet">
+<link rel="preload" href="{{ $.Site.Params.cssPath | default "css/smorg.css" | absURL }}" as="style">
+<link rel="stylesheet" href="{{ $.Site.Params.cssPath | default "css/smorg.css" | absURL }}">
+<!--	<link rel="preload" href="{{ "css/navbar.css" | absURL }}" as="style">
+	<link rel="stylesheet" href="{{ "css/navbar.css" | absURL }}">-->
+	<link rel="preload" type="text/css" href="{{ "/css/icons.css" | absURL }}" as="style">
+	<link rel="stylesheet" type="text/css" href="{{ "/css/icons.css" | absURL }}">
 	{{ .Hugo.Generator -}}
 	{{- partial "favicon.html" . -}}

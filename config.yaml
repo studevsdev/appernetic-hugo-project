@@ -16,7 +16,7 @@
 # Every site needs these few: theme, baseURL, languageCode and title
 # Name of the theme your Hugo site uses; leave this in place:
 theme: "hugo-smorg"
-baseURL: "https://studevsdev.github.io/"
+baseURL: "http://www.example.com/"
 languageCode: "en-us"
 title: "Hugo-Smorg Theme"
 
@@ -97,7 +97,7 @@ params:
 
     # cssPath: <css/smorg.css> site main CSS; can be supplemented by including
     # link or style elements in a custom site partials/head-custom.html
-    cssPath: 'css/smorg.min.css' # Default, override here
+    cssPath: 'css/navbar.css' # Default, override here
 
     # only_feed_summaries: Include only Page summaries in Atom and RSS feeds.
     only_feed_summaries: true
@@ -112,8 +112,8 @@ params:
 
     # Sites should customize their logo or wordmark here; Provided via partials/logo.html.
     # used in default navigation and footer.
-    logotype: '<span class="has-text-weight-bold">hugo-<span class="has-text-danger">smorg</span></span>'
-    footer: 'An open source theme by <a href="https://mikewatkins.ca/">Mike Watkins</a>'
+    logotype: '<img src="images/logos/StudevsLogo.png" alt=""  height="42">'
+    footer: ''
     subfooter: '<i class="fab fa-github"></i> <a href="https://github.com/solutionroute/hugo-smorg">github.com/solutionroute/hugo-smorg</a>'
 
     # Optional information used in RSS, Atom and JSON-LD microdata. See Schema.org.

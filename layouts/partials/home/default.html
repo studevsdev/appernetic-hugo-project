@@ -1,0 +1,68 @@
+<section class="hero is-fullheight is-default is-bold" itemscope itemtype="http://schema.org/HomePage">
+
+		{{ partial "nav.html" . }}
+
+<div class="hero-body">
+		<div class="container">
+			<div class="columns is-vcentered">
+
+				<div class="column is-5 is-offset-1 landing-caption">
+					<h1 class="title is-1 is-bold is-spaced">
+						Manage. Deploy.
+					</h1>
+					<h2 class="subtitle is-5 is-muted">
+						{{ with .Site.Params.fullname }}{{ . }}
+						{{ else }}{{ "Add params:fullname" }}{{end}}
+					</h2>
+					<p>
+						<a class="button cta rounded primary-btn raised" href="#">
+							Get started!
+						</a>
+					</p>
+				</div>
+
+				<div class="column is-5 is-offset-1">
+					<figure class="image is-4by3">
+						<img src="{{ "/images/illustrations/worker.svg" | relURL }}" alt="Description">
+					</figure>
+				</div>
+
+					<!--	<div class="column is-10 is-vcentered is-offset-1">
+							<h1 class="title is-1 is-bold is-spaced">
+			          Manage. Deploy.
+			        </h1>
+					<h2 class="subtitle is-5 is-muted">
+						{{ with .Site.Params.fullname }}{{ . }}
+						{{ else }}{{ "Add params:fullname" }}{{end}}
+					</h2>
+					<div class="content">
+					{{ .Content }}
+					</div>
+					<div class="columns">
+						<div class="column">
+							<h3 class="subtitle has-text-primary is-marginless">Posts</h3>
+							<ul>
+							{{ range first 5 (where .Data.Pages "Section" "post") }}
+							<li><a href="{{.Permalink}}"><span class="icon">✎</span>{{ .Title }}</a></li>
+							{{ end }}
+							<li><a href="{{ "post/" | absURL}}">More posts<span class="icon">➤</span></a></li>
+							</ul>
+						</div>
+						<div class="column">
+							<h3 class="subtitle has-text-primary is-marginless">Projects</h3>
+							<ul>
+							{{ range first 5 (where .Data.Pages "Section" "project") }}
+							<li><a href="{{.Permalink}}"><span class="icon">※</span>{{ .Title }}</a></li>
+							{{ end }}
+							<li><a href="{{ "project/" | absURL }}">More projects<span class="icon">➤</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>-->
+			</div>
+		</div>
+	</div>
+</section>
+{{ partial "footer.html" . }}
+
+  <div id="backtotop"><a href="#"></a></div>
