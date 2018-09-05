@@ -138,30 +138,25 @@ menu:
           identifier: "about"
           weight: 10
 
-        - name: "Contact Us"
-          url: "about/contact/"
+        - name: "Team"
+          url: "about/team/"
           parent: "about"
-          weight: 101
+          weight: 102
+
+        - name: "Partners"
+          url: "about/partners/"
+          parent: "about"
+          weight: 103
+
+        - name: "Test"
+          url: "about/test/"
+          parent: "about"
+          weight: 104
 
         - name: "Projects"
-          url: "project/"
-          identifier: "project"
-          weight: 20
-
-        - name: "Hugo-Smorg"
-          url: "project/hugo-smorg/"
-          parent: "project"
-          weight: 201
-
-        - name: "Blorg Bread Machine"
-          url: "project/blorg-bread-machine/"
-          parent: "project"
-          weight: 202
-
-        - name: "XYZ-1000"
-          url: "project/xyz-1000/"
-          parent: "project"
-          weight: 203
+          url: "about/projects/"
+          parent: "about"
+          weight: 101
 
         - name: "Blog"
           url: "post/"

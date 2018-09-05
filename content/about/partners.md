@@ -1,15 +1,11 @@
 ---
-title: This Theme
+title: "Partners"
 description: About Hugo-Smorg, a theme for the fast and flexible Hugo static site generator
 date: 2018-03-01
 updated: 2018-04-01
 layout: subsection
 weight: 103
-menu:
-    sectionmenu:
-          parent: "about"
-          url: "about/hugo/"
-          weight: 103
+
 ---
 
 [Hugo-Smorg](https://solutionroute.github.io/hugo-smorg/) is a theme for
@@ -35,4 +31,3 @@ It makes use of a variety of open source projects including:
 * [Cast](https://github.com/spf13/cast)
 
 Learn more and contribute on [GitHub](https://github.com/gohugoio).
-

@@ -6,6 +6,8 @@ date: 2018-03-07T02:16:58-08:00
 draft: false
 categories: ['hugo',]
 tags: ['theme','bulma']
+layout: subsection
+
 ---
 
 [Hugo-smorg][] (smorg = small org, or smorgasbord perhaps) is a responsive
@@ -33,5 +35,5 @@ here](https://github.com/comfusion/after-dark/issues/32#issuecomment-312515542).
 
 [Hugo]: https://gohugo.io/
 [Hugo-smorg]: https://github.com/solutionroute/hugo-smorg
-[Bulma]: https://bulma.io/ 
+[Bulma]: https://bulma.io/
 [Bulmaswatch]: https://jenil.github.io/bulmaswatch/

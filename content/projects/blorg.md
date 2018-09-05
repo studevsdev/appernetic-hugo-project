@@ -5,6 +5,8 @@ draft: false
 slug: blorg-bread-machine
 tags: ['iot', 'recycling']
 categories: ['products']
+layout: subsection
+url: about/projects/blorg
 ---
 
 The hand-crafted Blorg Bread Baker(TM) enhances any kitchen. Produced from 100% post-consumer recycled materials you'll never once think... wait a minute, I'm baking my bread in other people's refuse.
