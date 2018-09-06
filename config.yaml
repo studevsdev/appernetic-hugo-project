@@ -153,9 +153,24 @@ menu:
           parent: "about"
           weight: 101
 
-        - name: "Blog"
-          url: "post/"
-          weight: 30
+        - name: "For Students"
+          url: "#"
+          identifier: "for-students"
+          weight: 2
+        - name: "For Companies"
+          url: "#"
+          identifier: "for-companies"
+          weight: 3
+        - name: "Our Services"
+          url: "#"
+          identifier: "our-services"
+          weight: 4
+
+        - name: "Home"
+          url: "#"
+          identifier: "/"
+          weight: 1
+
 # Syndication feeds atom.xml and rss.xml ---------------------------------
 # Adds Atom feed support in conjunction with /layouts/index.atom.xml
 # Change default rss filename to rss.xml, layout is built in to Hugo
