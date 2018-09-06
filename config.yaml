@@ -148,11 +148,6 @@ menu:
           parent: "about"
           weight: 103
 
-        - name: "Test"
-          url: "about/test/"
-          parent: "about"
-          weight: 104
-
         - name: "Projects"
           url: "about/projects/"
           parent: "about"
