@@ -4,30 +4,12 @@ description: About Hugo-Smorg, a theme for the fast and flexible Hugo static sit
 date: 2018-03-01
 updated: 2018-04-01
 layout: subsection
-weight: 103
-
+#weight: 103
+breadcrumb: true
+#cards: true
 ---
 
-[Hugo-Smorg](https://solutionroute.github.io/hugo-smorg/) is a theme for
-[Hugo](https://gohugo.io/), the blazingly fast super flexible static site
-engine.
 
-See the project page: https://github.com/solutionroute/hugo-smorg, and  
-the demo site: https://solutionroute.github.io/hugo-smorg/exampleSite/  
-for more information.
+Lorem ipsum dolor sit amet, ne case aliquip vituperata his. Choro epicuri albucius ne qui. Sea ei hinc decore, voluptua theophrastus ei eos. Per id vocent persecuti, in eos semper mnesarchum, vel eu graeci discere.
 
-Go Hugo!
-
-## Hugo
-
-Hugo is a static site engine written in Go.
-
-
-It makes use of a variety of open source projects including:
-
-* [Cobra](https://github.com/spf13/cobra)
-* [Viper](https://github.com/spf13/viper)
-* [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
-* [Cast](https://github.com/spf13/cast)
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Noluisse appellantur nec in, an zril offendit theophrastus mea. Ne mea indoctum vulputate. Id quis everti eam, consul verear concludaturque eu his. Id quo pertinax moderatius, quo probatus voluptatum in. Idque nonumy splendide sea ut, no eum quem viderer democritum, et choro suavitate per. Melius molestie honestatis ea pri.

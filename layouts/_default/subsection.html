@@ -1,33 +1,77 @@
 {{ define "main" }}
 <!-- use for a section like About that has just a few anicillary pages:
-	/about/_index.md
-	/about/contact.md
-	/about/faq.md
+/about/_index.md
+/about/contact.md
+/about/faq.md
 
-	In front-matter of each page including _index.md include:
+In front-matter of each page including _index.md include:
 
-	layout: subsection.html
+layout: subsection.html
 
-	Each will be presented as a single page with a breadcrumb menu at the top
-	allowing for navigation among related pages in the section.
+Each will be presented as a single page with a breadcrumb menu at the top
+allowing for navigation among related pages in the section.
 
 -->
 {{- if $.Site.Params.debug }}<p class="has-text-danger">DEBUG: layouts/_default/subsection.html</p>{{ end -}}
 <section class="section is-medium" itemscope itemtype="http://schema.org/WebPage">
 	<div class="container">
 		<div class="columns is-vcentered">
-				<div class="column is-12 is-vcentered">
-					{{ partial "section-crumbs.html" . }}
+			<div class="column is-12 is-vcentered">
+				{{ if isset .Params "breadcrumb" }}	{{ partial "section-crumbs.html" . }} {{ end }}
 				<article class="content">
-
-
-						<h1 class="title is-2 is-spaces is-bold">{{ .Title }}</h1>
-
+					<h1 class="title is-2 is-spaces is-bold">{{ .Title }}</h1>
 					{{- partial "page-status.html" . -}}
 					{{- .Content }}
 				</article>
 			</div>
 		</div>
 	</div>
+
+{{ if isset .Params "cards" }}
+<div class="container section-feature-grey">
+	<div class="content-wrapper">
+		<div class="columns is-mobile">
+			{{- $numberofcards := .Params.numberofcards | default 3 }}
+			{{- $currentNode := . }}
+			{{ if eq .File.BaseFileName "_index" }}
+			{{- range $index, $section := .Site.Sections }}
+			{{- if eq $section $currentNode.CurrentSection }}
+			{{- range $i, $page := $section.Pages | first $numberofcards}}
+			<div class="column">
+				<div class="card">
+					<div class="card-image">
+						{{- with .Params.image }}<figure class="image is-4by3">
+							<img src="{{.}}" alt="Project">
+						</figure>{{ end }}
+					</div>
+					<div class="card-content">
+						<div class="media">
+							<div class="media-content has-text-centered">
+								<p class="title is-4">{{ $page.Slug | default $page.Name | title }}</p>
+
+								<div class="card-action">
+									<a href="{{ .Permalink }}" class="button btn-align-md accent-btn raised">Mehr erfahren</a>
+								</div>
+							</div>
+						</div>
+						<div class="content has-text-centered">
+							{{ .Summary }}
+						</div>
+					</div>
+				</div>
+			</div>
+	{{ end }}
+	{{ end }}
+	{{ end }}
+
+	</div>
+
+
+	{{ end }}
+
+</div>
+</div>
+{{ end }}
 </section>
+
 {{ end }}

@@ -149,32 +149,32 @@ menu:
           weight: 103
 
         - name: "Projects"
-          url: "about/projects/"
-          parent: "about"
+          url: "projects/"
+          identifier: "projects"
           weight: 101
-
+          
         - name: "For Students"
-          url: "#"
+          url: "for-students"
           identifier: "for-students"
           weight: 2
 
         - name: "Mentoring"
-          url: "#"
+          url: "for-students/mentoring"
           parent: "for-students"
           weight: 21
 
         - name: "Positions"
-          url: "#"
+          url: "for-students/positions"
           parent: "for-students"
           weight: 22
 
         - name: "Events"
-          url: "#"
+          url: "for-students/events"
           parent: "for-students"
           weight: 23
 
         - name: "Award"
-          url: "#"
+          url: "for-students/award"
           parent: "for-students"
           weight: 24
 
@@ -183,7 +183,7 @@ menu:
           url: "#"
           identifier: "for-companies"
           weight: 3
-                   
+
         - name: "Our Services"
           url: "#"
           identifier: "our-services"
