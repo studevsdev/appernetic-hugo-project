@@ -1,9 +1,9 @@
 {{ define "main" }}
 {{- if $.Site.Params.debug }}<p class="has-text-danger">DEBUG: layouts/_default/errorurl.html</p>{{ end -}}
-<section class="section" itemscope itemtype="http://schema.org/WebPage">
+<section class="section is-fullheight" itemscope itemtype="http://schema.org/WebPage">
 	<div class="container">
 		<div class="columns is-vcentered">
-				<div class="column is-10 is-vcentered is-offset-1">
+				<div class="column is-12">
 				<article class="content">
 					<h1 class="title has-text-danger">{{ .Title }}</h1>
 					<p class="subtitle">The URL you've requested requires authorization</p>
