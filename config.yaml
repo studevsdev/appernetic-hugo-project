@@ -157,10 +157,33 @@ menu:
           url: "#"
           identifier: "for-students"
           weight: 2
+
+        - name: "Mentoring"
+          url: "#"
+          parent: "for-students"
+          weight: 21
+
+        - name: "Positions"
+          url: "#"
+          parent: "for-students"
+          weight: 22
+
+        - name: "Events"
+          url: "#"
+          parent: "for-students"
+          weight: 23
+
+        - name: "Award"
+          url: "#"
+          parent: "for-students"
+          weight: 24
+
+
         - name: "For Companies"
           url: "#"
           identifier: "for-companies"
           weight: 3
+                   
         - name: "Our Services"
           url: "#"
           identifier: "our-services"
