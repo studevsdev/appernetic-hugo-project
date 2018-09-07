@@ -30,7 +30,7 @@ allowing for navigation among related pages in the section.
 {{ if isset .Params "cards" }}
 <div class="container section-feature-grey">
 	<div class="content-wrapper">
-		<div class="columns is-mobile">
+		<div class="columns">
 			{{- $numberofcards := .Params.numberofcards | default 3 }}
 			{{- $currentNode := . }}
 			{{ if eq .File.BaseFileName "_index" }}

@@ -152,7 +152,7 @@ menu:
           url: "projects/"
           identifier: "projects"
           weight: 101
-          
+
         - name: "For Students"
           url: "for-students"
           identifier: "for-students"
@@ -180,12 +180,12 @@ menu:
 
 
         - name: "For Companies"
-          url: "#"
+          url: "for-companies"
           identifier: "for-companies"
           weight: 3
 
         - name: "Our Services"
-          url: "#"
+          url: "our-services"
           identifier: "our-services"
           weight: 4
 
