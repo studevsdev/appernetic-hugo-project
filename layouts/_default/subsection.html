@@ -27,51 +27,50 @@ allowing for navigation among related pages in the section.
 		</div>
 	</div>
 
-{{ if isset .Params "cards" }}
-<div class="container section-feature-grey">
-	<div class="content-wrapper">
-		<div class="columns">
-			{{- $numberofcards := .Params.numberofcards | default 3 }}
-			{{- $currentNode := . }}
-			{{ if eq .File.BaseFileName "_index" }}
-			{{- range $index, $section := .Site.Sections }}
-			{{- if eq $section $currentNode.CurrentSection }}
-			{{- range $i, $page := $section.Pages | first $numberofcards}}
-			<div class="column">
-				<div class="card">
-					<div class="card-image">
-						{{- with .Params.image }}<figure class="image is-4by3">
-							<img src="{{.}}" alt="Project">
-						</figure>{{ end }}
-					</div>
-					<div class="card-content">
-						<div class="media">
-							<div class="media-content has-text-centered">
-								<p class="title is-4">{{ $page.Slug | default $page.Name | title }}</p>
-
-								<div class="card-action">
-									<a href="{{ .Permalink }}" class="button btn-align-md accent-btn raised">Mehr erfahren</a>
+	{{ if isset .Params "cards" }}
+	<div class="container section-feature-grey">
+		<div class="content-wrapper">
+			<div class="columns">
+				{{- $numberofcards := .Params.numberofcards | default 3 }}
+				{{- $currentNode := . }}
+				{{ if eq .File.BaseFileName "_index" }}
+				{{- range $index, $section := .Site.Sections }}
+				{{- if eq $section $currentNode.CurrentSection }}
+				{{- range $i, $page := $section.Pages | first $numberofcards}}
+				<div class="column is-flex">
+					<div class="card">
+						<div class="card-image">
+							{{- with .Params.image }}<figure class="image is-4by3">
+								<img src="{{.}}" alt="{{ $page.Slug | default $page.Name | title }}">
+							</figure>{{ end }}
+						</div>
+						<div class="card-content">
+							<div class="media">
+								<div class="media-content has-text-centered">
+									<p class="title is-4">{{ $page.Slug | default $page.Name | title }}</p>
 								</div>
 							</div>
-						</div>
-						<div class="content has-text-centered">
-							{{ .Summary }}
+							<div class="content">
+								{{ .Summary }}
+							</div>
+							<div class="card-action has-text-centered">
+								<a href="{{ .Permalink }}" class="button btn-align-md accent-btn raised">Mehr erfahren</a>
+							</div>
 						</div>
 					</div>
 				</div>
+				{{ end }}
+				{{ end }}
+				{{ end }}
+
 			</div>
-	{{ end }}
-	{{ end }}
-	{{ end }}
 
+
+			{{ end }}
+
+		</div>
 	</div>
-
-
 	{{ end }}
-
-</div>
-</div>
-{{ end }}
 </section>
 
 {{ end }}

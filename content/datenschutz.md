@@ -1,17 +1,11 @@
 ---
-title: "For Companies"
+title: "Datenschutz"
 description: About Hugo-Smorg, a theme for the fast and flexible Hugo static site generator
 date: 2018-03-01
 updated: 2018-04-01
 
 ---
 
-<figure>
-  <img src="http://studevs.ddnss.de/storage/Unternehmen.jpg"  />
-  <figcaption>
-      <em>Lorem ipsum dolor sit amet, ne case aliquip vituperata his. </em>
-  </figcaption>
-</figure>
 
 Lorem ipsum dolor sit amet, ne case aliquip vituperata his. Choro epicuri albucius ne qui. Sea ei hinc decore, voluptua theophrastus ei eos. Per id vocent persecuti, in eos semper mnesarchum, vel eu graeci discere.
 

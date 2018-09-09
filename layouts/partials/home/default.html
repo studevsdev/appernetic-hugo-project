@@ -1,68 +1,97 @@
-<section class="hero is-fullheight is-default is-bold" itemscope itemtype="http://schema.org/HomePage">
+<section class="section is-default section-light-grey is-bold" itemscope itemtype="http://schema.org/HomePage">
 
 		{{ partial "nav.html" . }}
+		<!--<section class="section section-light-grey is-fullheight">-->
+			<div class="container">
+		    <div class="title-wrapper has-text-centered">
+		      <h2 class="title is-2">StuDEVS</h2>
+		      <h3 class="subtitle is-5 is-muted">Klassische Landingpage wo ein paar Infos zur Firma und ggfls. kleine News (neue Projekte/Studenten etc.) stehen.
 
-<div class="hero-body">
-		<div class="container">
-			<div class="columns is-vcentered">
+		(Gewisser Teil "dynamik"/anpassungen an der website teilweise notwendig)</h3>
+		      <div class="divider is-centered"></div>
+		    </div>
 
-				<div class="column is-5 is-offset-1 landing-caption">
-					<h1 class="title is-1 is-bold is-spaced">
-						Manage. Deploy.
-					</h1>
-					<h2 class="subtitle is-5 is-muted">
-						{{ with .Site.Params.fullname }}{{ . }}
-						{{ else }}{{ "Add params:fullname" }}{{end}}
-					</h2>
-					<p>
-						<a class="button cta rounded primary-btn raised" href="#">
-							Get started!
-						</a>
-					</p>
-				</div>
+		    <div class="content-wrapper">
+		      <div class="columns">
+		        <div class="column is-flex">
+							<div class="card">
+								<div class="card-image">
+									<figure class="image is-3by3">
+										<img src="http://studevs.ddnss.de/storage/Studenten.jpg" alt="Fur Studenten">
+									</figure>
+								</div>
+								<div class="card-content">
+									<div class="media">
+										<div class="media-content has-text-centered">
+											<p class="title is-4">Fur Studenten</p>
+										</div>
+									</div>
+									<div class="content has-text-centered">
+									Lorem ipsum dolor sit amet, ne case aliquip vituperata his. Choro epicuri albucius ne qui. Sea ei hinc decore, voluptua theophrastus ei eos.
+									</div>
+									<div class="card-action has-text-centered">
+										<a href="/for-students/" class="button btn-align-md accent-btn raised">Mehr erfahren</a>
+									</div>
+								</div>
+							</div>
+		        </div>
+		        <div class="column is-half is-flex">
+							<div class="card">
+								<div class="card-image">
+									<figure class="image is-2by2">
+										<img src="http://studevs.ddnss.de/storage/Studevs.jpg" alt="Uber StuDEVS">
+									</figure>
+								</div>
+								<div class="card-content">
+									<div class="media">
+										<div class="media-content has-text-centered">
+											<p class="title is-4">Uber StuDEVS</p>
+										</div>
+									</div>
+									<div class="content has-text-centered">
+								Wer sind wir?<br />
+								Was machen wir?<br />
+								We sind unsere Partner?
+									</div>
+									<div class="card-action has-text-centered">
+										<a href="/projects/" class="button btn-align-md accent-btn raised">Mehr erfahren</a>
+									</div>
+								</div>
+							</div>
+		        </div>
+		        <div class="column is-flex">
+							<div class="card">
+								<div class="card-image">
+									<figure class="image is-2by2">
+										<img src="http://studevs.ddnss.de/storage/Unternehmen.jpg" alt="Fur Unternemhen">
+									</figure>
+								</div>
+								<div class="card-content">
+									<div class="media">
+										<div class="media-content has-text-centered">
+											<p class="title is-4">Fur Unternemhen</p>
+										</div>
+									</div>
+									<div class="content has-text-centered">
+									Lorem ipsum dolor sit amet, ne case aliquip vituperata his. Choro epicuri albucius ne qui. Sea ei hinc decore, voluptua theophrastus ei eos.
+									</div>
+									<div class="card-action has-text-centered">
+										<a href="/about/partners/" class="button btn-align-md accent-btn raised">Mehr erfahren</a>
+									</div>
+								</div>
+							</div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+	<!--	</section>-->
 
-				<div class="column is-5 is-offset-1">
-					<figure class="image is-4by3">
-						<img src="{{ "/images/illustrations/worker.svg" | relURL }}" alt="Description">
-					</figure>
-				</div>
 
-					<!--	<div class="column is-10 is-vcentered is-offset-1">
-							<h1 class="title is-1 is-bold is-spaced">
-			          Manage. Deploy.
-			        </h1>
-					<h2 class="subtitle is-5 is-muted">
-						{{ with .Site.Params.fullname }}{{ . }}
-						{{ else }}{{ "Add params:fullname" }}{{end}}
-					</h2>
-					<div class="content">
-					{{ .Content }}
-					</div>
-					<div class="columns">
-						<div class="column">
-							<h3 class="subtitle has-text-primary is-marginless">Posts</h3>
-							<ul>
-							{{ range first 5 (where .Data.Pages "Section" "post") }}
-							<li><a href="{{.Permalink}}"><span class="icon">✎</span>{{ .Title }}</a></li>
-							{{ end }}
-							<li><a href="{{ "post/" | absURL}}">More posts<span class="icon">➤</span></a></li>
-							</ul>
-						</div>
-						<div class="column">
-							<h3 class="subtitle has-text-primary is-marginless">Projects</h3>
-							<ul>
-							{{ range first 5 (where .Data.Pages "Section" "project") }}
-							<li><a href="{{.Permalink}}"><span class="icon">※</span>{{ .Title }}</a></li>
-							{{ end }}
-							<li><a href="{{ "project/" | absURL }}">More projects<span class="icon">➤</span></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>-->
-			</div>
-		</div>
-	</div>
+
+
 </section>
+
+
 {{ partial "footer.html" . }}
 
   <div id="backtotop"><a href="#"></a></div>

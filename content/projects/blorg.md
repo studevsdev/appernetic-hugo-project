@@ -20,4 +20,4 @@ The hand-crafted Blorg Bread Baker(TM) enhances any kitchen. Produced from 100% 
 
 Some versions may include a BetaMax(tm) video tape interface.
 
-![Futuristic Bread Truck](project/futuristic-bread-truck.jpg)
+![Futuristic Bread Truck](projects/futuristic-bread-truck.jpg)

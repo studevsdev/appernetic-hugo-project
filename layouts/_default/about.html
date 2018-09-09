@@ -37,25 +37,24 @@ allowing for navigation among related pages in the section.
 				{{- range $index, $section := .Site.Sections }}
 				{{- if eq $section $currentNode.CurrentSection }}
 				{{- range $i, $page := $section.Pages | first $numberofcards}}
-				<div class="column">
+				<div class="column is-flex">
 					<div class="card">
 						<div class="card-image">
 							{{- with .Params.image }}<figure class="image is-4by3">
-								<img src="{{.}}" alt="Project">
+								<img src="{{.}}" alt="{{ $page.Slug | default $page.Name | title }}">
 							</figure>{{ end }}
 						</div>
 						<div class="card-content">
 							<div class="media">
 								<div class="media-content has-text-centered">
 									<p class="title is-4">{{ $page.Slug | default $page.Name | title }}</p>
-
-									<div class="card-action">
-										<a href="{{ .Permalink }}" class="button btn-align-md accent-btn raised">Mehr erfahren</a>
-									</div>
 								</div>
 							</div>
 							<div class="content has-text-centered">
 								{{ .Summary }}
+							</div>
+							<div class="card-action has-text-centered">
+								<a href="{{ .Permalink }}" class="button btn-align-md accent-btn raised">Mehr erfahren</a>
 							</div>
 						</div>
 					</div>
@@ -76,7 +75,7 @@ allowing for navigation among related pages in the section.
 	<br><br>
 
 	<div class="container">
-		<div class="columns is-vcentered">
+		<div class="columns">
 			<div class="column is-6">
 				<div class="resp-container">
 					<iframe class="resp-iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=13.330289125442507%2C52.432584640655065%2C13.33595395088196%2C52.435416937802465&amp;layer=mapnik&amp;marker=52.434000811982315%2C13.333121538162231">
@@ -86,15 +85,13 @@ allowing for navigation among related pages in the section.
 <a href="https://goo.gl/maps/7ZRmG3YsX4U2" target="_blank">Route Planen</a>
 
 			</div>
-			<div class="column is-6">
-				<div class="content">
+			<div class="column is-6 has-text-centered">
 
 
-				<div class="title-wrapper has-text-centered">
-					<h2 class="title is-3 is-spaced">Drop us a line or two </h2>
-					<h3 class="subtitle is-5 is-muted">We'd love to hear from you</h3>
-				</div>
-				</div>
+					<h2 class="title is-2 is-spaced">Drop us a line or two </h2>
+					<h3 class="subtitle is-5 is-muted">We'd love to hear from you!</h3>
+
+
 				<form>
 					<div class="columns is-multiline">
 						<div class="column is-6">
