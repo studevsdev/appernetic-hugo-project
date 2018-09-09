@@ -1,0 +1,125 @@
+{{ define "main" }}
+<!-- use for a section like About that has just a few anicillary pages:
+/about/_index.md
+/about/contact.md
+/about/faq.md
+
+In front-matter of each page including _index.md include:
+
+layout: subsection.html
+
+Each will be presented as a single page with a breadcrumb menu at the top
+allowing for navigation among related pages in the section.
+
+-->
+{{- if $.Site.Params.debug }}<p class="has-text-danger">DEBUG: layouts/_default/subsection.html</p>{{ end -}}
+<section class="section is-fullheight" itemscope itemtype="http://schema.org/WebPage">
+	<div class="container">
+		<div class="columns is-vcentered">
+			<div class="column is-12 is-vcentered">
+				{{ if isset .Params "breadcrumb" }}	{{ partial "section-crumbs.html" . }} {{ end }}
+				<article class="content">
+					<h1 class="title is-2 is-spaces is-bold">{{ .Title }}</h1>
+					{{- partial "page-status.html" . -}}
+					{{- .Content }}
+				</article>
+			</div>
+		</div>
+	</div>
+
+	{{ if isset .Params "cards" }}
+	<div class="container section-feature-grey">
+		<div class="content-wrapper">
+			<div class="columns">
+				{{- $numberofcards := .Params.numberofcards | default 3 }}
+				{{- $currentNode := . }}
+				{{ if eq .File.BaseFileName "_index" }}
+				{{- range $index, $section := .Site.Sections }}
+				{{- if eq $section $currentNode.CurrentSection }}
+				{{- range $i, $page := $section.Pages | first $numberofcards}}
+				<div class="column">
+					<div class="card">
+						<div class="card-image">
+							{{- with .Params.image }}<figure class="image is-4by3">
+								<img src="{{.}}" alt="Project">
+							</figure>{{ end }}
+						</div>
+						<div class="card-content">
+							<div class="media">
+								<div class="media-content has-text-centered">
+									<p class="title is-4">{{ $page.Slug | default $page.Name | title }}</p>
+
+									<div class="card-action">
+										<a href="{{ .Permalink }}" class="button btn-align-md accent-btn raised">Mehr erfahren</a>
+									</div>
+								</div>
+							</div>
+							<div class="content has-text-centered">
+								{{ .Summary }}
+							</div>
+						</div>
+					</div>
+				</div>
+				{{ end }}
+				{{ end }}
+				{{ end }}
+
+			</div>
+
+
+			{{ end }}
+
+		</div>
+	</div>
+	{{ end }}
+
+	<br><br>
+
+	<div class="container">
+		<div class="columns is-vcentered">
+			<div class="column is-6">
+				<div class="resp-container">
+					<iframe class="resp-iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=13.330289125442507%2C52.432584640655065%2C13.33595395088196%2C52.435416937802465&amp;layer=mapnik&amp;marker=52.434000811982315%2C13.333121538162231">
+					</iframe>
+				</div>
+
+<a href="https://goo.gl/maps/7ZRmG3YsX4U2" target="_blank">Route Planen</a>
+
+			</div>
+			<div class="column is-6">
+				<div class="content">
+
+
+				<div class="title-wrapper has-text-centered">
+					<h2 class="title is-3 is-spaced">Drop us a line or two </h2>
+					<h3 class="subtitle is-5 is-muted">We'd love to hear from you</h3>
+				</div>
+				</div>
+				<form>
+					<div class="columns is-multiline">
+						<div class="column is-6">
+							<input class="input is-medium" type="text" placeholder="Enter your name">
+						</div>
+						<div class="column is-6">
+							<input class="input is-medium" type="email" placeholder="Enter your email address">
+						</div>
+						<div class="column is-12">
+							<textarea class="textarea" rows="10" placeholder="Write someting..."></textarea>
+						</div>
+						<div class="form-footer has-text-centered mt-10">
+							<button class="button cta is-large primary-btn raised is-clear">Send Message</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+
+
+
+</section>
+
+{{ end }}
